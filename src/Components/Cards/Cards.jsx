@@ -14,27 +14,27 @@ const Cards = ({
     const active = confirmed["value"] - recovered["value"] - deaths["value"]
     let cardDetails = [
         {
-            sytle: styles.infected,
+            style: styles.infected,
             text: "Infected",
             value: confirmed.value,
             bottomText: "Number of infected cases from COVID-19",
         },
         {
-            sytle: styles.recovered,
+            style: styles.recovered,
             text: "Recovered",
             value: recovered.value,
             bottomText: "Number of recovered cases from COVID-19",
         },
         {
-            sytle: styles.deaths,
+            style: styles.deaths,
             text: "Deaths",
             value: deaths.value,
             bottomText: "Number of deaths from COVID-19",
         },
         {
-            sytle: styles.active,
+            style: styles.active,
             text: "Active",
-            value: active.value,
+            value: active,
             bottomText: "Number of active COVID-19 cases",
         },
     ]
@@ -47,7 +47,7 @@ const Cards = ({
                         component={Card}
                         xs={12}
                         md={2}
-                        className={cx(styles.Card, detail.style)}
+                        className={cx(styles.card, detail.style)}
                         key={index}
                         style={{ margin: "0px 23.675px", padding: "12px" }}>
                         <CardContent>
